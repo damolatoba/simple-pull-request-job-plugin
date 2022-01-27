@@ -1,13 +1,13 @@
-agent:
-  label: my_label
-  dockerImage: ubuntu:latest
+pipeline:
+  agent:
+    any:
 
-stages:
-  - stage: 'stage1'
-    steps:
-      - sh "docker --version"
-      - sh "git --version"
-  - stage: "Repo clone"
-    steps:
-      - git "https://github.com/damolatoba/simple-pull-request-job-plugin.git"
-      - sh "echo 'Jenkins pipe don work'"
+  stages:
+    - stage: "Repo clone"
+      steps:
+        - git "https://github.com/damolatoba/new_linux_vm.git"
+        - sh "echo 'Jenkins pipe don work'"
+    - stage: "Stage One"
+      steps:
+        - sh "lsb_release -a"
+        - sh "git --version"
