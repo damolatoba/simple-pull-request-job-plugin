@@ -3,7 +3,11 @@ agent:
   dockerImage: ubuntu:latest
 
 stages:
-  - name: 'stage1'
-    agent: any
-    - sh:
-        script: "scripts/hello"
+  - stage: 'stage1'
+    steps:
+      - sh "docker --version"
+      - sh "git --version"
+  - stage: "Repo clone"
+    steps:
+      - git "https://github.com/damolatoba/simple-pull-request-job-plugin.git"
+      - sh "echo 'Jenkins pipe don work'"
