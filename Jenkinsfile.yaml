@@ -1,5 +1,4 @@
 agent:
-#  Docket image agent example
   label: my_label
   dockerImage: docker pull ubuntu:latest
 
