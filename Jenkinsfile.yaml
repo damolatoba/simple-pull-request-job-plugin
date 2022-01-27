@@ -5,5 +5,5 @@ agent:
 stages:
   - name: 'stage1'
     agent: any
-    steps:
-      - sh: "scripts/hello"
+    - sh:
+        script: "scripts/hello"
