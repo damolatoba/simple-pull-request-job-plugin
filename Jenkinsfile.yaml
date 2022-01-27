@@ -3,7 +3,7 @@ agent:
   dockerImage: ubuntu:latest
 
 stages:
-  - name: stage1
+  - name: 'stage1'
     agent: any
     steps:
       - sh: "scripts/hello"
